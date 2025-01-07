@@ -1,0 +1,145 @@
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+
+    background-color: #F5F5F5; /* Fondo gris claro */
+    padding: 8px 20px; /* Añade espacio interno */
+    width: 100%; /* Asegura que el navbar ocupa todo el ancho */
+    box-sizing: border-box; /* Incluye el padding dentro del ancho total */
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    position: relative;
+    padding: 10px 20px;
+}
+
+/* Estilos base para los botones normales */
+.menu-item a {
+    text-decoration: none;
+    color: #000; /* Texto negro */
+    background-color: #F5F5F5; /* Fondo claro */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.menu-item a:hover {
+    color: #F5A439; /* Texto en naranja */
+    background-color: #F1F1F1; /* Fondo ligeramente diferente al pasar el cursor */
+}
+
+/* Estilos para los botones especiales */
+.menu-item.special a {
+    background-color: #F5A439; /* Fondo naranja */
+    color: #F1F1F1; /* Texto blanco */
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.menu-item.special a:hover {
+    background-color: #D89436; /* Fondo más oscuro al pasar el cursor */
+}
+
+/* Submenús */
+.submenu, .subsubmenu {
+    display: none;
+    position: absolute;
+    background-color: #F5F5F5;
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.submenu {
+    top: 100%;
+    left: 0;
+    width: 220px;
+}
+
+.subsubmenu {
+    top: 0;
+    left: 100%;
+    width: 220px;
+}
+
+/* Mostrar submenús al pasar el cursor */
+.menu-item:hover > .submenu {
+    display: block;
+}
+
+.submenu-item:hover > .subsubmenu {
+    display: block;
+}
+
+/* Estilos para los elementos de los submenús */
+.submenu-item a, .subsubmenu-item a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+    display: block;
+}
+
+.submenu-item a:hover, .subsubmenu-item a:hover {
+    color: #F5A439;
+    background-color: #f0f0f0;
+}
+
+/* Espaciado y altura ajustados */
+.submenu-item, .subsubmenu-item {
+    line-height: 1.5;
+}
+
+/* Estilo para pantallas grandes (comportamiento actual) */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Media query para pantallas reducidas */
+@media (max-width: 768px) {
+    .menu {
+       
+        align-items: flex-start;
+    }
+    
+    
+    .menu-item {
+        width: 100%; /* Cada botón ocupa toda la fila */
+        text-align: left; /* Alinear texto a la izquierda */
+        margin-bottom: 5px; /* Separación entre elementos */
+    }
+    .menu-item.special {
+        text-align: center; /* Opcional: centra los botones especiales */
+    }
+
+    /* Ajuste de submenús */
+     
+    .submenu-item a, .subsubmenu-item a {
+        text-decoration: none;
+        color: #000;
+        padding: 4px;
+ 
+    }
+    
+    .submenu li, .subsubmenu li {
+        margin-bottom: 2px; /* Añade separación entre los subelementos */
+    }
+}

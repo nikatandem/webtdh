@@ -1,0 +1,178 @@
+/* Estilos básicos de la galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    border: 1px solid #D89436;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+.card-title{
+    margin-top: 0;
+    font-size: medium;
+    font-family: sans-serif;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.tags {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.tag {
+    padding: 5px 7px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 0.6rem;
+}
+
+.tag-1 {
+    background-color: #F5A439;
+}
+
+.tag-2 {
+    background-color: #4CAF50;
+}
+
+.tag-3 {
+    background-color: #2196F3;
+}
+
+.project-description {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.btn-saber-mas {
+    background-color: #F5A439;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn-saber-mas:hover {
+    background-color: #D89436;
+}
+
+/* Estilos para la ficha del proyecto */
+.project-details {
+    position: relative; /* Necesario para que el botón se posicione dentro de este contenedor */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Estilo del botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Coloca el botón en la esquina superior derecha */
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.close-btn:hover {
+    background-color: #F5A439; /* Fondo naranja al pasar el cursor */
+    color: white; /* Texto blanco al pasar el cursor */
+}
+
+/* Estilos para el slider (imágenes grandes) */
+.slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* Ocultar imágenes fuera del contenedor */
+}
+
+.slider img {
+    position: absolute;
+    width: 80%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    display: none; /* Ocultar todas las imágenes por defecto */
+}
+
+/* Asegúrate de que la primera imagen esté visible inicialmente */
+.slider img:first-child {
+    display: block;
+}
+
+
+/* Estilos para la información del proyecto */
+.project-info {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0px;
+}
+
+/* Efecto de zoom, Estilo para centrado y capa de fondo */
+.project-details {
+    position: fixed; /* Fijar en la pantalla */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar horizontal y verticalmente */
+    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 80%; /* Ajusta el tamaño de la tarjeta */
+    max-width: 700px;
+    overflow: hidden;
+    opacity: 0; /* Ocultar inicialmente */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación */
+}
+
+.project-details.zoom-in {
+    opacity: 1; /* Mostrar elemento */
+}
+
+
+
+/* Fondo oscuro para el resto de la pantalla */
+body::before {
+    content: "";
+    display: none; /* Ocultar inicialmente */
+    position: fixed; /* Fijar en toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    z-index: 999; /* Detrás de .project-details */
+}
+
+/* Efecto de zoom */
+body.details-open::before {
+    display: block; /* Mostrar fondo oscuro */
+}
+
+
+
+

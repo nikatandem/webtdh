@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas de trabajo</title>
+    <link rel="stylesheet" href="fichas.css">
+</head>
+<body> 
+<div class="container">
+        <div id="menu-container"></div>
+        <div class="gallery">
+            <div class="project-card">
+                <h3 class="card-title">Titulo proyecto</h3>
+                <img src="image1.jpg" alt="Proyecto 1">
+                <div class="tags">
+                    <span class="tag tag-1">INFANCIA</span>
+                    <span class="tag tag-2">PROTECCIÓN</span>
+                    <span class="tag tag-3">JUSTICIA</span>
+                </div>
+                <p class="project-description">Descripción corta del proyecto...</p>
+                <button class="btn-saber-mas" data-id="1">Saber más</button>
+            </div>
+            <div class="project-card">
+                <h3 class="card-title">Titulo proyecto</h3>
+                <img src="image2.jpg" alt="Proyecto 2">
+                <div class="tags">
+                    <span class="tag tag-1">INFANCIA</span>
+                    <span class="tag tag-3">JUSTICIA</span>
+                </div>
+                <p class="project-description">Descripción corta del proyecto...</p>
+                <button class="btn-saber-mas" data-id="2">Saber más</button>
+            </div>
+
+            <div class="project-card">
+                <h3 class="card-title">Titulo proyecto</h3>
+                <img src="image3.jpg" alt="Proyecto 3">
+                <div class="tags">
+                    <span class="tag tag-1">INFANCIA</span>
+                    <span class="tag tag-2">PROTECCIÓN</span>
+                    <span class="tag tag-3">JUSTICIA</span>
+                </div>
+                <p class="project-description">Descripción corta del proyecto...</p>
+                <button class="btn-saber-mas" data-id="2">Saber más</button>
+            </div>
+
+        </div>
+        
+        <!-- Ficha Detallada -->
+        <div class="project-details" id="project-details">
+            <!-- El botón de cierre ahora estará dentro de la tarjeta, en la esquina superior derecha -->
+            <button class="close-btn" onclick="closeDetails()">X</button>
+        
+            <div class="slider">
+                <!-- Aquí se mostrarán las 4 imágenes del slider -->
+                <img src="image1.jpg" alt="Imagen 1">
+                <img src="image2.jpg" alt="Imagen 2">
+                <img src="image3.jpg" alt="Imagen 3">
+                <img src="image4.jpg" alt="Imagen 4">
+            </div>
+        
+            <div class="project-info">
+                <h3 class="card-title">Proyecto: Proyecto 1</h3>
+                <p><strong>Beneficiarios:</strong> 500 personas</p>
+                <p><strong>Objetivos:</strong> Objetivos del proyecto</p>
+                <p><strong>Zona Geográfica:</strong> País X</p>
+                <p><strong>Financiación Actividades:</strong> $10,000</p>
+                <p><strong>Valor Añadido:</strong> Impacto positivo en la comunidad</p>
+            </div>
+        </div>
+        
+        
+    </div>
+  
+<script src="script.js"></script>
+<script src="script-ficha.js"></script>
+</body>
+</html>

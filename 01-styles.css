@@ -1,0 +1,35 @@
+/* Contenedor principal para las tres esferas */
+.stats-container {
+    display: flex; /* Para colocar los divs hijos en fila */
+    justify-content: space-between; /* Para separar las esferas de manera uniforme */
+    gap: 5%; /* Espacio entre las esferas */
+    width: 60%; /* Ocupa todo el ancho de la pantalla */
+    padding: 20px 10px; /* Espaciado interior */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center ;
+}
+
+/* Estilo de cada esfera */
+.stat {
+    width: 30%; /* Cada esfera ocupará el 30% del ancho del contenedor */
+    padding: 40px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 50%; /* Hace que el div sea redondo */
+    border: 5px solid #F5A439; /* Borde naranja */
+    text-align: center; /* Centra el texto dentro de la esfera */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.stat h2 {
+    font-size: 1.2rem;
+    color: #000000; /* Texto negro */
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 2rem;
+    color: #000000; /* Texto negro */
+    font-weight: bold;
+}
